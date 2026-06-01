@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ميثك ميديا - Mythic Media</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="header-container">
+        <div class="brand" id="brand-logo-btn">
+          <span class="brand-logo">M</span>
+          <div class="brand-text">
+            <h1>ميثك ميديا</h1>
+            <span>Mythic Media</span>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <button id="btn-home" class="nav-btn active">البث المباشر</button>
+          <button id="btn-academy" class="nav-btn">أكاديمية التدريب</button>
+          <button id="btn-creator" class="nav-btn creator-color">
+            استوديو المحتوى
+          </button>
+          <button id="btn-admin" class="nav-btn admin-color">
+            لوحة التحكم (Admin)
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div id="home" class="page active">
+        <div class="player-layout">
+          <div class="video-section">
+            <div class="stream-placeholder">
+              <div class="placeholder-content">
+                <div class="large-logo">M</div>
+                <h2>انتظروا انطلاق البث المباشر قريباً</h2>
+                <p>
+                  المنصة قيد التطوير البرمجي بأعلى معايير الأمان والتشفير لمنع
+                  التحميل غصباً.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="academy" class="page">
+        <div class="academy-header">
+          <h2>أكاديمية ميثك ميديا للتدريب</h2>
+        </div>
+      </div>
+
+      <div id="creator" class="page">
+        <div class="academy-header">
+          <h2>استوديو ميثك ميديا لصناع المحتوى</h2>
+          <p>إدارة الحقوق الرقمية والتحكم المطلق في خصوصية وتنزيل فيديوهاتك.</p>
+        </div>
+
+        <div class="grid-layout">
+          <div class="control-card">
+            <div class="card-badge">حماية الملكية (DRM)</div>
+            <h3>صلاحية تنزيل المحتوى للمشتركين</h3>
+            <p>هل ترغب في السماح للمشتركين بتنزيل فيديوهاتك على أجهزتهم؟</p>
+
+            <div class="toggle-container">
+              <label class="switch">
+                <input type="checkbox" id="allow-download-toggle" />
+                <span class="slider"></span>
+              </label>
+              <span class="toggle-label">تفعيل إمكانية التنزيل للمشتركين</span>
+            </div>
+          </div>
+
+          <div class="control-card">
+            <div class="card-badge">تحكم تفصيلي</div>
+            <h3>تحديد الفيديوهات المتاحة للتنزيل للجميع</h3>
+            <p>
+              اختر بدقة أي الفيديوهات يمكن لأي شخص تحميلها (مثلاً الفيديوهات
+              العامة/الترويجية):
+            </p>
+
+            <ul class="video-download-list">
+              <li>
+                <input type="checkbox" id="vid-1" />
+                <label for="vid-1">فيديو مقدمة المنصة والترحيب (عام)</label>
+              </li>
+              <li>
+                <input type="checkbox" id="vid-2" />
+                <label for="vid-2"
+                  >الكورس التعليمي المتكامل - الحلقة 1 (خاص)</label
+                >
+              </li>
+              <li>
+                <input type="checkbox" id="vid-3" />
+                <label for="vid-3"
+                  >البث المباشر الحصري والمحمي (فائق السرية)</label
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="admin" class="page">
+        <div class="academy-header">
+          <h2>غرفة القيادة والتحكم | Mythic Admin</h2>
+        </div>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <p>جميع الحقوق محفوظة © كيان ميثك ميديا 2026</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

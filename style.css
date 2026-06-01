@@ -1,0 +1,364 @@
+/* الألوان الملوكية الرسمية لكيان ميثك ميديا - مستوحاة بالملي من الشعار */
+:root {
+    --bg-main: #0b0f14;          /* الأسود الكحلي الفخم (خلفية اللوجو) */
+    --bg-surface: #121820;       /* لون الأسطح والكروت المندمجة */
+    --bg-header: #171f2b;        /* لون شريط التنقل العلوي (Navbar) */
+    --color-gold: #d4af37;       /* الذهب المطفي الفخم الخاص بحرف الـ M */
+    --color-gold-hover: #f3cf65; /* درجة لمعان الذهب عند التفاعل */
+    --color-alert: #ff4d4d;      /* اللون الأحمر المخصص للتنبيهات الأمنية */
+    --color-success: #2ecc71;    /* اللون الأخضر لحالة السيرفر المستقرة */
+    --text-primary: #ffffff;     /* النص الأساسي الأبيض النقي */
+    --text-muted: #8fa0b2;       /* النص الفرعي الهادئ */
+    --border-subtle: #1e2938;    /* الفواصل والحدود الأنيقة */
+}
+
+/* التنسيق الأساسي والنظام */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* شريط التنقل العلوي (Navbar) */
+.main-header {
+    background-color: var(--bg-header);
+    border-bottom: 2px solid var(--color-gold);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.header-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+/* براند ميثك ميديا */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.brand-logo {
+    background-color: var(--bg-main);
+    color: var(--color-gold);
+    font-size: 1.6rem;
+    font-weight: 900;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 2px solid var(--color-gold);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+.brand-text h1 {
+    font-size: 1.3rem;
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.brand-text span {
+    font-size: 0.8rem;
+    color: var(--color-gold);
+    letter-spacing: 1px;
+    display: block;
+}
+
+/* أزرار التوجيه */
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-btn {
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--text-muted);
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    color: var(--color-gold);
+    background-color: rgba(212, 175, 55, 0.05);
+}
+
+.nav-btn.active {
+    color: var(--bg-main);
+    background-color: var(--color-gold);
+    border-color: var(--color-gold);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+/* ألوان مميزة لأزرار الإدارة والاستوديو في القائمة */
+.nav-btn.admin-color {
+    border: 1px dashed var(--color-gold);
+}
+
+.nav-btn.creator-color {
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+/* الحاوية الرئيسية للمحتوى */
+.main-content {
+    max-width: 1300px;
+    margin: 40px auto;
+    padding: 0 20px;
+    min-height: 70vh;
+}
+
+/* نظام إدارة الصفحات والتحكم في الظهور */
+.page {
+    display: none;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.page.active {
+    display: block;
+}
+
+/* 1. تصميم شاشة البث المباشر الفخمة (Cinema Placeholder) */
+.stream-placeholder {
+    background: linear-gradient(135deg, #11161d 0%, #070a0e 100%);
+    border-radius: 12px;
+    border: 1px solid var(--border-subtle);
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 450px;
+}
+
+.placeholder-content {
+    max-width: 500px;
+}
+
+.large-logo {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--color-gold);
+    border: 3px solid var(--color-gold);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px auto;
+    border-radius: 16px;
+    background-color: var(--bg-main);
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
+}
+
+.placeholder-content h2 {
+    color: var(--text-primary);
+    margin: 0 0 12px 0;
+    font-size: 1.8rem;
+}
+
+.placeholder-content p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin: 0;
+}
+
+.video-info {
+    margin-top: 25px;
+    padding: 10px 5px;
+}
+
+.video-info h2 {
+    color: var(--color-gold);
+    margin: 0 0 10px 0;
+    font-size: 1.8rem;
+}
+
+.video-info p {
+    color: var(--text-muted);
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* 2. تنسيقات العناوين المشتركة للأقسام */
+.academy-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.academy-header h2 {
+    color: var(--color-gold);
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+.academy-header p {
+    color: var(--text-muted);
+    max-width: 800px;
+    margin: 10px auto 0 auto;
+    font-size: 1.1rem;
+}
+
+/* تقسيم الشبكة (Grid Layout) للكروت */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* 3. تنسيق كروت استوديو صناع المحتوى والتحكم الدقيق */
+.control-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    padding: 30px;
+    border-radius: 12px;
+    border-right: 4px solid var(--color-gold); /* علامة تميز كروت التحكم */
+}
+
+.control-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.4rem;
+    color: var(--text-primary);
+}
+
+.control-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+.card-badge {
+    background-color: rgba(212, 175, 55, 0.1);
+    color: var(--color-gold);
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+/* تصميم السلايدر الانسيابي (Switch/Toggle) */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #1e2938;
+    transition: .4s;
+    border-radius: 34px;
+    border: 1px solid var(--border-subtle);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px; width: 18px;
+    left: 3px; bottom: 3px;
+    background-color: var(--text-muted);
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: rgba(212, 175, 55, 0.2);
+    border-color: var(--color-gold);
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+    background-color: var(--color-gold);
+}
+
+.toggle-label {
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+/* قائمة التحكم الدقيق بالفيديوهات */
+.video-download-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.video-download-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.video-download-list li:last-child {
+    border-bottom: none;
+}
+
+.video-download-list input[type="checkbox"] {
+    accent-color: var(--color-gold);
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.video-download-list label {
+    color: var(--text-primary);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* الفوتر السفلي */
+.main-footer {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--bg-header);
+    border-top: 1px solid var(--border-subtle);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* تأثير دخول ناعم عند التبديل بين الصفحات */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
